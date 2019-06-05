@@ -14,7 +14,7 @@ export default class App extends React.Component {
   handleLoaded = () => this.setState({ loaded: true })
 
   loadAssets = async () => {
-    await Font.loadAssets({
+    await Font.loadAsync({
       ...Ionicons.font
     })
   }

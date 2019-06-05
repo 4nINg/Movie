@@ -7,7 +7,7 @@ const TabBarIcon = ({ name, focused }) => (
   <Ionicons size={26} name={name} color={focused ? ACTIVE_COLOR : INACTIVE_COLOR} />
 )
 
-TabBarIcon.PropTypes = {
+TabBarIcon.propTypes = {
   name: PropTypes.string.isRequired,
   focused: PropTypes.bool.isRequired
 }
