@@ -1,20 +1,20 @@
 import axios from "axios"
 const api = axios.create({
-  baseURL: "https://api.themoviedb.org/3/"
+  // baseURL: "https://api.themoviedb.org/3/",
 })
 
 export const movies = {
   getMovie: id => api.get(`movie/${id}`, { params: { append_to_response: "videos" } }),
   getPopular: () =>
-    api.get("movie/popular", {
+    api.get("https://api.themoviedb.org/3/movie/popular", {
       params: { api_key: "584467f43959cb7bd6c03220e9d02eb7", language: "en-US" }
     }),
   getUpcoming: () =>
-    api.get("movie/upcoming", {
+    api.get("https://api.themoviedb.org/3/movie/upcoming", {
       params: { api_key: "584467f43959cb7bd6c03220e9d02eb7", language: "en-US" }
     }),
   getNowPlaying: () =>
-    api.get("movie/now_playing", {
+    api.get("https://api.themoviedb.org/3/movie/now_playing", {
       params: { api_key: "584467f43959cb7bd6c03220e9d02eb7", language: "en-US" }
     }),
   searchMovies: term =>

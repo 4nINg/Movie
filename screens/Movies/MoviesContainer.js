@@ -34,8 +34,13 @@ export default class extends React.Component {
 
   render() {
     const { loading, upcoming, popular, nowPlaying } = this.state
-
-    console.log(this.state)
+    console.log("###################################################################")
+    console.log(upcoming)
+    console.log("upcoming    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    console.log(popular)
+    console.log("popular    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    console.log(nowPlaying)
+    console.log("nowplaying    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     return (
       <MoviesPresenter
         loading={loading}
